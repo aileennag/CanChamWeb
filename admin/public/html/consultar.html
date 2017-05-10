@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CanCham MX</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/stylesheets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/stylesheets/css/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/stylesheets/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/stylesheets/css/startmin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/stylesheets/css/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/stylesheets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Administrador</a>
+        </div>
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        <!-- Top Navigation: Left Menu -->
+        <ul class="nav navbar-nav navbar-left navbar-top-links">
+            <li><a href="#"><i class="fa fa-home fa-fw"></i> Website</a></li>
+        </ul>
+
+        <!-- Top Navigation: Right Menu -->
+        <ul class="nav navbar-right navbar-top-links">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i> admin <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Sidebar -->
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a href="#" class="active" ><font color="D54545"><i class="fa fa-bars fa-fw"></i> Menú Principal</a></font>
+                    </li>
+                    <li>
+                        <a href="#"><font color="D54545"><i class="fa fa-calendar fa-fw"></i> Eventos <span class="fa arrow"></span></a></font>
+                            <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><font color="D54545">Editar Información <span class="fa arrow"></span></a></font>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="/html/agregarEvento.html"><font color="D54545">Agregar Evento</a></font>
+                                    </li>
+                                    <li>
+                                        <a href="/html/cambiarEvento.html"><font color="D54545">Cambiar Evento</a></font>
+                                    </li>
+                                    <li>
+                                        <a href="/html/borrarEvento.html"><font color="D54545">Borrar Evento</a></font>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="#"><font color="D54545"><i class="fa fa-archive fa-fw"></i> Repositorio de información <span class="fa arrow"></span></a></font>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><font color="D54545">Editar Información <span class="fa arrow"></span></a></font>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="/repositorio"><font color="D54545">Agregar Archivo </a></font>
+                                    </li>
+                                    <li>
+                                        <a href="/html/cambiarArchivo.html"><font color="D54545">Cambiar Arhivo </a></font>
+                                    </li>
+                                    <li>
+                                        <a href="/html/borrarArchivo.html"><font color="D54545">Borrar Arhivo </a></font>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="/html/consultar.html"><font color="D54545"><i class="fa fa-book fa-fw"></i> Consultar Información </a></font>
+                    </li>
+                  
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="page-wrapper">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Consultar Información</h1>
+                </div>
+            </div>
+
+            <!-- ... Your content goes here ... -->
+            
+            <form action='/show' method="gets">
+                    <p>
+                      <label for='info'> Selecciona la información que deseas ver: </label>
+                      <select id='info' name='info'>
+                          <option><i class="fa fa-calendar fa-fw"></i>Eventos</option>
+                          <option><i class="fa fa-credit-card fa-fw"></i>Solicitudes de Membresías</option>
+                          <option><i class="fa fa-pencil fa-fw"></i>Preguntas al expositor</option>
+                          <option><i class="fa fa-users fa-fw"></i>Registros de la aplicación</option>
+                          <option><i class="fa fa-archive fa-fw"></i>Repositorio</option>
+                      </select>
+                    </p>
+                    <p>
+                      <button type="submit" class="btn btn-danger">Submit</button>
+                    </p>
+                    <p></p>
+            </form>
+            
+            
+
+        </div>
+    </div>
+
+</div>
+
+<!-- jQuery -->
+<script src="/javascripts/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/javascripts/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="/javascripts/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/javascripts/startmin.js"></script>
+
+</body>
+</html>
